@@ -1,6 +1,7 @@
 import { MouseEvent, ReactNode, RefObject, useEffect, useRef, useState } from 'react';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import { Bot, BrainCircuit, Code2, ExternalLink, Layers3, MessageCircle, Rocket, ShieldCheck, Sparkles } from 'lucide-react';
+import yaniCartoonHead from './assets/yani-cartoon-head.webp';
 
 const bg = '#0C0C0C';
 const ink = '#D7E2EA';
@@ -264,20 +265,17 @@ function HeroSection() {
         </h1>
       </FadeIn>
 
-      <FadeIn delay={0.6} y={30} className="absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:w-[360px] sm:translate-y-0 md:w-[440px] lg:w-[520px]">
+      <FadeIn delay={0.6} y={30} className="absolute left-[calc(50%-155px)] top-[34%] z-10 w-[310px] sm:left-[calc(50%-210px)] sm:top-[30%] sm:w-[420px] md:left-[calc(50%-250px)] md:top-[26%] md:w-[500px] lg:left-[calc(50%-295px)] lg:top-[24%] lg:w-[590px]">
         <Magnet padding={150} strength={3} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
-          <div className="relative mx-auto aspect-[0.78] w-full">
-            <div className="absolute inset-[9%] rounded-[42%] border border-[#D7E2EA]/20 bg-gradient-to-b from-[#D7E2EA]/10 to-transparent blur-[1px]" />
-            <div className="absolute inset-x-[15%] bottom-[6%] top-[4%] rounded-full bg-[radial-gradient(circle_at_50%_20%,rgba(215,226,234,.28),transparent_28%),linear-gradient(180deg,rgba(182,0,168,.28),rgba(190,76,0,.18))] blur-2xl" />
+          <div className="relative mx-auto aspect-[0.74] w-full">
+            <div className="absolute inset-[8%] rounded-full border border-[#D7E2EA]/20 bg-gradient-to-b from-[#D7E2EA]/10 to-transparent blur-[1px]" />
+            <div className="absolute inset-x-[4%] bottom-[0%] top-[6%] rounded-full bg-[radial-gradient(circle_at_50%_20%,rgba(215,226,234,.26),transparent_28%),linear-gradient(180deg,rgba(182,0,168,.3),rgba(190,76,0,.16))] blur-2xl" />
             <img
-              src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-              alt="Yani Meziani, AI product builder"
-              className="relative z-10 h-full w-full -translate-x-12 object-contain drop-shadow-[0_40px_90px_rgba(182,0,168,.35)] sm:translate-x-0"
+              src={yaniCartoonHead}
+              alt="Cartoon portrait of Yani Meziani"
+              className="relative z-10 h-full w-full object-contain drop-shadow-[0_38px_90px_rgba(182,0,168,.4)]"
               draggable={false}
             />
-            <div className="absolute bottom-[13%] left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/15 bg-black/45 px-4 py-2 text-xs font-medium uppercase tracking-widest text-white backdrop-blur-md">
-              <Sparkles size={14} /> AI Native
-            </div>
           </div>
         </Magnet>
       </FadeIn>
